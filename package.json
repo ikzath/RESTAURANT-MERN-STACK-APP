@@ -12,15 +12,19 @@
     "mongoose": "^5.11.13",
     "path": "^0.12.7"
   },
+
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd dlient && cd mern-stack && npm run build",
-    "install-client": "cd client && cd mern-stack && npm run build",
+    "build": "cd ./dlient/mern-stack && npm run build",
+    "install-client": "cd ./client/mern-stack && npm run build",
     "heroku-postbuild": "npm run install-client && npm run build", 
     "start": "node server.js",
     "server": "nodemon server.js"
   },
   "author": "ikzath",
-  "license": "ISC"
+  "license": "ISC",
+      "engines": {
+      "node": "12.18.3"
+    }
 }
