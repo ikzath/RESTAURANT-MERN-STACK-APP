@@ -5,12 +5,14 @@ const path = require('path');
 const app = express();
 const config = require('config');
 const cors = require('cors');
+// const env = require("dotenv");
 
 //bodyparser middleware
 app.use(bodyParser.json());
 
 //cross platform adapability
 app.use(cors())
+
 
 // route required
 const items = require('./routes/api/items');
