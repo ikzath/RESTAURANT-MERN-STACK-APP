@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && cd mern-stack npm run build",
     "install-client": "cd client && cd mern-stack && npm run build",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build",
     "start": "node server.js",
     "server": "nodemon server.js"
   },
