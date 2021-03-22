@@ -37,10 +37,10 @@ app.use('/api/items', items);
 // serve static assets  if in production
 if(process.env.NODE_ENV === 'production') {
      // serve static folder
-       app.use(express.static('client/mern-stack/build'));
+       app.use(express.static('client1/build'));
      
        app.get('*', (req, res)=> {
-            res.sendFile(path.resolve(__dirname, 'client/mern-stack/build/index.html'));
+            res.sendFile(path.resolve(__dirname, 'client1/index.html'));
        } ); 
      }
      
