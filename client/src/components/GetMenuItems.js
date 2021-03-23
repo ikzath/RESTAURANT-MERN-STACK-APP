@@ -11,7 +11,7 @@ function GetMenuItems() {
 
     useEffect(() => {
         axios
-        .get('http://localhost:6600/api/items')
+        .get('/api/items')
         .then(res => {
           setData(res.data)
           console.log(data);

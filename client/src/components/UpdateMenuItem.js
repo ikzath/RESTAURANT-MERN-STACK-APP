@@ -17,7 +17,7 @@ function UpdateMenuItem(props) {
 
       useEffect(() => {
         const getMenuItem = async () => {
-          const url = `http://localhost:6600/api/items/${id}`;
+          const url = `/api/items/${id}`;
           const result = await axios.get(url);
 
           setMenu(result.data);
@@ -35,7 +35,7 @@ function UpdateMenuItem(props) {
           e.preventDefault();
 
         axios
-        .put(`http://localhost:6600/api/items/${id}`, menu)
+        .put(`/api/items/${id}`, menu)
         .then(function (response) {
             history.push(`/show-item/${id}`);
             console.log(response)

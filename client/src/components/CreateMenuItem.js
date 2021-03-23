@@ -22,7 +22,7 @@ function CreateMenuItem() {
         e.preventDefault();
 
         axios
-        .post('http://localhost:6600/api/items', data)
+        .post('/api/items', data)
         .then(function (response) {
             console.log(response)
         })
