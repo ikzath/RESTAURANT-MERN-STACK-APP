@@ -9,14 +9,9 @@ function GetMenuItems() {
 
     const [data, setData] = useState([]); 
 
-    const instance = axios.create({
-      // .. where we make our configurations
-          baseURL: 'http://localhost:6600/api/items'
-      });
-
     useEffect(() => {
         axios
-        .get(instance, { headers: {"Access-Control-Allow-Origin": "*"}} )
+        .get('http://localhost:6600/api/items')
         .then(res => {
           setData(res.data)
           console.log(data);
