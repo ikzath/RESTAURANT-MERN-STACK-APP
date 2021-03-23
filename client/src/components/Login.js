@@ -35,8 +35,7 @@ function Login() {
             </form>
             
             <p>
-              By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale. Please
-              see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+            dummy login page, just click on login button to go to home page
             </p>
     
             <button type='submit' className='login__registerButton' >Create your Amzon account</button>

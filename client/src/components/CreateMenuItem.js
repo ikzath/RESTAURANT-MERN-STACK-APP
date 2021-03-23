@@ -28,7 +28,8 @@ function CreateMenuItem() {
         })
         .catch(function (error) {
             console.log(error)
-        }) 
+        })
+        history.push('/menu-items') 
       };
     
     
