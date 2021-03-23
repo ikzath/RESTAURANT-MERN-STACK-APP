@@ -18,7 +18,7 @@ function ShowMenuItem(props) {
 
   useEffect(() => {
     const getMenuItem = async () => {
-      const url = `http://localhost:6600/api/items/${id}`;
+      const url = `/api/items/${id}`;
       const result = await axios.get(url);
 
       setMenu(result.data);
@@ -35,7 +35,7 @@ function ShowMenuItem(props) {
     e.preventDefault();
 
     axios
-      .delete(`http://localhost:6600/api/items/${id}`)
+      .delete(`/api/items/${id}`)
       .then(res => {
       history.push("/menu-items");
       })

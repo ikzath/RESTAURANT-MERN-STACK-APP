@@ -8,7 +8,7 @@ function UpdateMenuItem(props) {
       const initialTutorialState = {
         name: "",
         description: "",
-        price: ''
+        price: null
       };
       const [menu, setMenu] = useState(initialTutorialState);   
       const id = props.match.params.id;
