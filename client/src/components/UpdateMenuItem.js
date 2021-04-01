@@ -5,10 +5,11 @@ import axios from 'axios';
 
 function UpdateMenuItem(props) {
 
+      const re = /^[0-9\b]+$/;
       const initialTutorialState = {
         name: "",
         description: "",
-        price: null
+        price: "" 
       };
       const [menu, setMenu] = useState(initialTutorialState);   
       const id = props.match.params.id;
@@ -28,8 +29,8 @@ function UpdateMenuItem(props) {
       }, []);
 
       const handleChange = (event) => {
-        setMenu({...menu, [event.target.name]: event.target.value})
-    }
+        setMenu({...menu, [event.target.name]: event.target.value})        
+      }
 
       const postData = e => {
           e.preventDefault();
@@ -51,8 +52,7 @@ function UpdateMenuItem(props) {
             <div className="row">
               <div className="col-md-8 m-auto">
                 <br />
-                <Link to='/menu-list'>
-                {/* <Link to="/" className="btn btn-outline-warning float-left"> */}
+                <Link to='/menu-items'>
                     Show Menu List
                 </Link>
               </div>
@@ -71,7 +71,7 @@ function UpdateMenuItem(props) {
                 <input
                   type='text'
                   placeholder='name of menu item'
-                  name='title'
+                  name='name'
                   className='form-control'
                   value={menu.name}
                   onChange={handleChange}
@@ -87,7 +87,6 @@ function UpdateMenuItem(props) {
                         className='form-control'
                         value={menu.description}
                         onChange={handleChange}
-                        required
                         />                  
                     </div>
   
@@ -95,9 +94,10 @@ function UpdateMenuItem(props) {
               <div className='form-group'>
               <label htmlFor="price">Price</label>
                 <input
-                  type='text'
+                  type="number"
+                  pattern="^-?[0-9]\d*\.?\d*$"
                   placeholder='price'
-                  name='isbn'
+                  name='price'
                   className='form-control'
                   value={menu.price}
                   onChange={handleChange}

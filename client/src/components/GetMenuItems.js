@@ -32,16 +32,16 @@ function GetMenuItems() {
               <h2 className="display-4 text-center">Menu List</h2>
             </div>
 
-            <div className="col-md-11">
-              <Link to="/create-item" className="btn btn-outline-warning float-right">
-                + Add New Menu Item
-              </Link>
-              <br />
-              <br />
-              <hr />
+            <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+                <Link to="/" className="btn btn-outline-warning float-right">
+                  Home Page
+                </Link>
+                <Link to="/create-item" className="btn btn-outline-warning float-right">
+                  + Add New Menu Item 
+                </Link>
+                <br /><br /><hr />
+              </div>
             </div>
-
-          </div>
 
           <div className="list">
                 {data && data.map( (item, i)=> (
